@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Variables ------------------------------
+    [SerializeField] private GameController gameController;
+    [Space]
     [SerializeField] private CharacterController2D characterController2D;
     [SerializeField] private float runSpeed = 40f;
     [SerializeField] private Animator animator;
     private bool climb = false;
     private float horizontalMove = 0;
 
+    #endregion
+
+    #region Private Methods -----------------------------
     private void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -33,4 +39,22 @@ public class PlayerMovement : MonoBehaviour
     {
         characterController2D.Move(horizontalMove * Time.fixedDeltaTime, false, false, climb);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "OutOfBounds")
+        {
+            gameController.ResetCurrentLevel();
+        }
+    }
+
+    #endregion
+
+    #region Public Methods ----------------------------------------
+    public void ResetPlayer(Vector2 resetPos)
+    {
+        characterController2D.Move(0, false, false, false);
+        this.transform.localPosition = resetPos;
+    }
+    #endregion
 }
