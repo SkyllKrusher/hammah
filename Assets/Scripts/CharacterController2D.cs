@@ -87,7 +87,6 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool crouch = false, bool jump = false, bool climb = false)
     {
-        Debug.Log(m_Climbable + ", " + climb);
         // If crouching, check to see if the character can stand up
         if (!crouch)
         {
@@ -158,7 +157,7 @@ public class CharacterController2D : MonoBehaviour
         }
         if (m_Climbable && climb)
         {
-            Debug.Log("Climbing");
+            // Debug.Log("Climbing");
             Vector3 targetVelocity = new Vector2(0, m_ClimbSpeed * Time.fixedDeltaTime);
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 

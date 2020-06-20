@@ -2,10 +2,10 @@ fileFormatVersion: 2
 guid: 47e09c408d7f7a442a9cd4879055f4a5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GroundLeft
-    21300002: GroundCenter
-    21300004: GroundLeftLong
-    21300006: Center
+    21300000: PlatformLeft
+    21300002: PlatformMiddle
+    21300004: PlatformLeftLong
+    21300006: PlatformMiddleLong
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -99,12 +99,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GroundLeft
+      name: PlatformLeft
       rect:
         serializedVersion: 2
-        x: 15
+        x: 12
         y: 419
-        width: 35
+        width: 39
         height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -119,13 +119,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GroundCenter
+      name: PlatformMiddle
       rect:
         serializedVersion: 2
-        x: 58
-        y: 418
-        width: 32
-        height: 57
+        x: 57
+        y: 419
+        width: 34
+        height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,13 +139,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GroundLeftLong
+      name: PlatformLeftLong
       rect:
         serializedVersion: 2
-        x: 104
-        y: 376
-        width: 37
-        height: 97
+        x: 98
+        y: 298
+        width: 43
+        height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,13 +159,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Center
+      name: PlatformMiddleLong
       rect:
         serializedVersion: 2
-        x: 158
-        y: 426
-        width: 33
-        height: 33
+        x: 147
+        y: 298
+        width: 37
+        height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
